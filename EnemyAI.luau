@@ -378,7 +378,7 @@ function EnemyAI.StartAI(enemy: Model, config: any, spawnPosition: Vector3)
 	
 	-- ai update loop runs at 10hz
 	aiData.aiConnection = RunService.Heartbeat:Connect(function()
-		-- throttle to ~10 updates per second for performance
+		-- throttle to 10 updates per second for performance
 		if tick() % 0.1 < 0.016 then
 			updateAI(aiData)
 		end
@@ -429,4 +429,5 @@ function EnemyAI.CleanupAll()
 end
 
 return EnemyAI
+
 
